@@ -6,7 +6,7 @@ function HomePage(props) {
   return (
     <ul>
       {props.products.map((product) => (
-        <Link href={`/${product.id}`}>
+        <Link href={`/products/${product.id}`}>
           <li key={product.id}>{product.title}</li>
         </Link>
       ))}
@@ -39,3 +39,6 @@ export async function getStaticProps() {
 }
 
 export default HomePage;
+
+
+// kisisel veriler ve sik degisen datalari barindiran sayfalar icin getStaticProps veya paths kullanmak mantikli degil
