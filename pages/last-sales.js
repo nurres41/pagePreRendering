@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useSWR from 'swr';
 
 const LastSalesPage = () => {
   const [sales, setSales] = useState();
   const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     setLoading(true);
     fetch("https://nextjs-course-4fbc3-default-rtdb.firebaseio.com/sales.json")
